@@ -21,3 +21,5 @@ Add a function for hit detection so the hockey sticks can hit the puck in order 
 
 ## Potential Roadblocks
 The goals that will be the most difficult for me to do is probably coding the AI to move up and down by itself. Also creating the point system and making it work. 
+
+![wireframefinal](https://user-images.githubusercontent.com/91287414/138512840-c776283e-ca0e-4877-b107-7d536473df52.png)
