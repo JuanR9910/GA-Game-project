@@ -1,8 +1,8 @@
 # GA-Game-project
 
-Title: Stick Hockey Turbo
+Title: Stick Hockey
 
-## of Players: 1
+## of Players: 2
 
 ## Rules/Win/Lose Conditions
 
@@ -11,12 +11,13 @@ Player to not obtain 3 points will lose
 
 ## What I must do
 Will be using canvas mostly to style my hockey stick, the puck, and the board.
-
+Animate my hockey stick to move and hit the hockey puck
 ## Goals
+Create 2 players
+Add hit detection so when my hockey stick moves against the puck it moves
+Add a track of scores for each player
+Create goals and have them make a point for the player that scores in it
 
-Give the option to play vs a CPU. Code an AI to play vs the player
-Set up a function for the player and CPU that whenever they score a goal they recieve 1 point.
-Add a function for hit detection so the hockey sticks can hit the puck in order for it to move, also add a function for the puck to bounce off the walls and enter the goals. 
 
 
 ## Potential Roadblocks
