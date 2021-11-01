@@ -10,7 +10,7 @@ First player to reach 3 points wins
 Player to not obtain 3 points will lose
 
 ## What I must do
-Will be using canvas mostly to style my hockey stick, the puck, and the board.
+Use canvas to create gameboard and use javascript to render objects
 Animate my hockey stick to move and hit the hockey puck
 ## Goals
 Create 2 players

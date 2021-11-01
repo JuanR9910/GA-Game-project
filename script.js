@@ -1,60 +1,48 @@
-const gameboard = document.getElementById("gameboard")
-const goals = document.getElementsByClassName("goal")
-const xgoal = document.getElementById("Player1")
-const ygoal = document.getElementById("Player2")
-const hockeysticks = document.getElementsByClassName("hockeystick")
-const hockeystick1 = document.getElementById("XPlayer")
-const hockeystick2 = document.getElementById("YPlayer")
-const puck = document.getElementById("puck")
-const scoreboard = document.getElementsByClassName("scorebooard")
-const player1score = document.getElementById("Player1score")
-const player2score = document.getElementById("Player2score")
+const canvas = document.getElementById("gameboard");
+const player1 = canvas.getContext('2d');
+const player2 = canvas.getContext('2d');
+const goal1 = canvas.getContext('2d');
+const goal2 = canvas.getContext('2d');
+const puck = canvas.getContext('2d');
+
+puck.beginPath();
+puck.arc(145, 65, 5, 0, 2 * Math.PI, false);
+puck.fillStyle = 'white';
+puck.fill();
+
+player1.fillStyle = 'green';
+player1.fillRect(70, 50, 5, 30);
+
+player2.fillStyle = 'red';
+player2.fillRect(220, 50, 5, 30);
+
+goal1.fillStyle = 'gold';
+goal1.fillRect(-10, 50, 20, 40);
+goal1.strokeRect(-10, 50, 20, 40);
+
+goal2.fillStyle = 'gold';
+goal2.fillRect(290, 50, 20, 40);
+goal2.strokeRect(290, 50, 20, 40);
+
+const movementHandler = () => {
+switch(player1){
+    case(87): 
+    player1.y -= 10
+    break
+    case(65):
+    player1.x -= 10
+    break
+    case(83):
+    player1.y += 10
+    break
+    case(68):
+    player1.x += 10
+    break
+}
+}
 
 
 
 
 
-
-
-// function player(x, y, width, height) {
-//     this.x = x
-//     this.y = y
-//     this.color = color
-//     this.width = width
-//     this.height = height
-
-//     this.render = function() {
-//     hockeystick1.fillStyle = this.color
-//      hockeystick1.fillRect(this.x, this.y, this.width, this.height)
-//     }
-// }
-// let p1 = new player()
-// function move(key) {
-//     if (key.toLowerCase()=="w")player
-// }
-
-
-
-document.addEventListener('keydown', function(event) {
-    //add event listeners for keys to make hockey sticks move
-    switch (event.key) {
-        case 38 : hockeystick1.style.top = (parseInt(hockeystick1.style.top) + 10) + 'px';
-        break;
-        case 40 : hockeystick1.y += 10
-        case 39 : hockeystick1.x -= 10
-        case 37 : hockeystick1.x += 10
-    }
-    //  hockeystick1()
-     console.log(hockeystick1.style)
-})
-// Use javascript to make hockey puck move
-
-// Make win conditions for players
-
-// Make multiple players for Game
-
-//Make goals detect scores for a player that shoots the hockey puck in them
-
-//Create hockey stick and hockey puck and animate them
-
-// Create a point system for players. First to three wins
+document.addEventListener('keydown', movementHandler)
