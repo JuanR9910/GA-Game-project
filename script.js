@@ -24,8 +24,8 @@ goal2.fillStyle = 'gold';
 goal2.fillRect(290, 50, 20, 40);
 goal2.strokeRect(290, 50, 20, 40);
 
-const movementHandler = () => {
-switch(player1){
+
+switch(movementHandler){
     case(87): 
     player1.y -= 10
     break
@@ -39,10 +39,22 @@ switch(player1){
     player1.x += 10
     break
 }
-}
 
 
 
 
 
-document.addEventListener('keydown', movementHandler)
+
+
+// document.addEventListener('keydown', function(event) {
+//     //add event listeners for keys to make hockey sticks move
+//     switch (event.key) {
+//         case 38 : hockeystick1.style.top = (parseInt(hockeystick1.style.top) + 10) + 'px';
+//         break;
+//         case 40 : hockeystick1.y += 10
+//         case 39 : hockeystick1.x -= 10
+//         case 37 : hockeystick1.x += 10
+//     }
+//     //  hockeystick1()
+//      console.log(hockeystick1.style)
+// })
