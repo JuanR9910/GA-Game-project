@@ -1,25 +1,30 @@
 # GA-Game-project
 
-Title: Stick Hockey
+Title: Pong Hockey
 
 ## of Players: 2
 
+## How to play
+Players move up and down using the keys.
+
+Player1: w : Up
+         s : Down
+
+Player2: o : Up
+         l : Down
+
+Move the players to hit the ball to the other players side to score a point
 ## Rules/Win/Lose Conditions
 
 First player to reach 3 points wins 
-Player to not obtain 3 points will lose
 
-## What I must do
-Use canvas to create gameboard and use javascript to render objects
-Animate my hockey stick to move and hit the hockey puck
-## Goals
-Create 2 players
-Add hit detection so when my hockey stick moves against the puck it moves
-Add a track of scores for each player
-Create goals and have them make a point for the player that scores in it
+## What I must do(Goals)
+Use js to render gameboard, players, ball and scores
+Set a win condition for player to win by making 3 points
+Create a gameloop for game run and players and ball to move
+Display each player score
+Implement a Reset button
 
 
 
-## Potential Roadblocks
-The goals that will be the most difficult for me to do is probably coding the AI to move up and down by itself. Also creating the point system and making it work. 
 
