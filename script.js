@@ -5,7 +5,12 @@ let puckDirectionX = true
 let puckDirectionY = true
 let player1Score = 0
 let player2Score = 0
-
+const winConditions = () => { if(player1Score == 3) {
+        console.log('player1Wins!', clearGame())
+} else if (player2Score == 3) {
+        console.log('player2Wins!', clearGame())
+}
+}
 
 
 class Xplayer {
@@ -89,10 +94,10 @@ player2.render()
         }
          movePuck() {
                  if (puckDirectionX == true) {
-                         hockeypuck.x += 3
+                         hockeypuck.x += 5
                  }
                  if (puckDirectionX == false) {
-                         hockeypuck.x -= 3
+                         hockeypuck.x -= 5
                  }
                  if (puckDirectionY == true) {
                          hockeypuck.y += 1
@@ -108,10 +113,10 @@ player2.render()
         }
    }
    const goal = () => {
-           if(hockeypuck.x == 0 ) {
+           if(hockeypuck.x == canvas.width ) {
                    console.log(player1Score += 1)
                    puckDirectionX = !puckDirectionX
-           } else if(hockeypuck.x == canvas.width) {
+           } else if(hockeypuck.x == 0) {
                    console.log(player2Score += 1)
                    puckDirectionX = !puckDirectionX
            }
@@ -149,8 +154,9 @@ player2.render()
         } 
 
 let drawScore = () => {
-        
-    player1Score.innerText = "scoreboard"
+
+    scoreboard.innerText = player1Score
+    scoreboard2.innerText = player2Score
 }
 
   const gameLoop = () => {
@@ -178,6 +184,7 @@ movement.innerText = `X: ${player2.x}\nY:  ${player2.y}`
       drawScore()
       goal()
       hitDetect()
+      winConditions()
  }
 
 
@@ -201,7 +208,8 @@ let stopGameLoop = () => {clearInterval(gameInterval)}
    })
  
 function startGame() {
-        window.location.reload()
+        let gameInterval = setInterval(gameLoop, 60)
+      
 }
 
 document.getElementById("Play").addEventListener("click", startGame)
@@ -214,7 +222,7 @@ document.getElementById("Rematch").addEventListener("click", clearGame)
 
 
 
-  let gameInterval = setInterval(gameLoop, 60)
+
 
 
 
