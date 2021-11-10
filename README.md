@@ -28,3 +28,7 @@ Implement a Reset button
 
 
 
+
+
+
+![wireframefinal](https://user-images.githubusercontent.com/91287414/138512840-c776283e-ca0e-4877-b107-7d536473df52.png)
