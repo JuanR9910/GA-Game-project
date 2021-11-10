@@ -22,3 +22,22 @@
         height: 50px;
         left: 70px;
  }
+
+ #scoreboard{
+         background-color: green;
+         width: 200px;
+         height: 20px;
+         position: relative;
+         top: 20px;
+         font-family: "Press Start 2P", cursive;
+
+ }
+
+ #scoreboard2{
+        background-color: red;
+        width: 200px; 
+        height: 20px;
+        position: relative;
+        left: 80%;
+        font-family: "Press Start 2P", cursive;
+ }

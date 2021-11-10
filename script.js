@@ -149,10 +149,8 @@ player2.render()
         } 
 
 let drawScore = () => {
-        if(drawScore == player1Score) {
-                player1Score.render
-                console.log('player1Score')
-        }
+        
+    player1Score.innerText = "scoreboard"
 }
 
   const gameLoop = () => {
