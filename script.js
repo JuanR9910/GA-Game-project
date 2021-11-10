@@ -1,3 +1,4 @@
+let gameInterval
 const canvas = document.getElementById("gameboard");
 const ctx = canvas.getContext('2d');
 const movement = document.getElementById('move')
@@ -5,11 +6,17 @@ let puckDirectionX = true
 let puckDirectionY = true
 let player1Score = 0
 let player2Score = 0
+const player1Wins = document.getElementById('player1Wins')
+const player2Wins = document.getElementById('player2Wins')
 const winConditions = () => { if(player1Score == 3) {
-        console.log('player1Wins!', clearGame())
+        stopGameLoop()
+        player1Wins.innerText = 'Player 1 Wins!'
 } else if (player2Score == 3) {
-        console.log('player2Wins!', clearGame())
-}
+        stopGameLoop()
+        player2Wins.innerText = 'Player 2 Wins!'
+        
+} 
+
 }
 
 
@@ -208,7 +215,7 @@ let stopGameLoop = () => {clearInterval(gameInterval)}
    })
  
 function startGame() {
-        let gameInterval = setInterval(gameLoop, 60)
+        gameInterval = setInterval(gameLoop, 60)
       
 }
 

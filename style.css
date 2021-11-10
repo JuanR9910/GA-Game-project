@@ -41,3 +41,18 @@
         left: 80%;
         font-family: "Press Start 2P", cursive;
  }
+
+ #Start{
+        font-family: "Press Start 2P", cursive;
+        background-color: white;
+ }
+
+ #player1Wins{
+        font-family: "Press Start 2P", cursive;
+        color: white;
+ }
+
+ #player2Wins{
+        font-family: "Press Start 2P", cursive;
+        color: white;
+ }
